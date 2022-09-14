@@ -4,12 +4,16 @@ public class MostrarTabela {
 
 	public static void exibirTabela(String[][] array) {
 
-		int i, j;
+		int a, b;
 
-		for (i = 0; i <= 2; i++) {
-			for (j = 0; j <= 2; j++) {
-				System.out.print(array[i][j] + "\t");
+		for (a = 0; a <= 2; a++) {
+			
+			for (b = 0; b <= 2; b++) {
+				
+				System.out.print(array[a][b] + "\t");
+				
 			}
+			
 			System.out.println();
 		}
 	}

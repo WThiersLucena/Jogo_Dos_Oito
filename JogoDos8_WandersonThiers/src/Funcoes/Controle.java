@@ -7,23 +7,26 @@ import Tabela.Tabela;
 public class Controle {
 
 	public static void entrada() {
-
+		Intro intro = new Intro();
+		String tabelaEmbaralhada[][];	
+	
 		String tabelaObjetivo[][];
-		String tabelaEmbaralhada[][];
+				
 		Object[] retorno;
+		
 		boolean y;
 
 		y = false;
 		tabelaObjetivo = Tabela.criarTabela();
-
-		System.out.println("Seu Objetivo e replicar esta tabela : \n");
+		intro.inicioDeJogo();
+		
 		MostrarTabela.exibirTabela(tabelaObjetivo);
 		System.out.println("\n");
 
 		tabelaEmbaralhada = Embaralhar.embaralhar(tabelaObjetivo);
 
 		while (y == false) {
-			System.out.println("Tabela embaralhada: \n");
+			intro.msgEmbaralhar();
 			MostrarTabela.exibirTabela(tabelaEmbaralhada);
 			System.out.println("Você pode mover apenas os número ao redor do 'vazio'.");
 			System.out.println("\n");
@@ -34,7 +37,7 @@ public class Controle {
 
 			retorno = jogar(i, tabelaEmbaralhada);
 			if ((boolean) retorno[1] == true) {
-				System.out.println("Voce chegou ao objetivo! \n");
+				intro.fimDeJogo();
 				MostrarTabela.exibirTabela((String[][]) retorno[0]);
 				y = true;
 			} else {

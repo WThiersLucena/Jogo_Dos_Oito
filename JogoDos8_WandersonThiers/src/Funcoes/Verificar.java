@@ -20,7 +20,7 @@ public class Verificar {
 				if (a != n) {
 					return false;
 				}
-
+				s.close();
 			}
 		}
 		return true;

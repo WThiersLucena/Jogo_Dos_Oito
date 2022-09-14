@@ -7,16 +7,17 @@ public class Mover {
 
 		int[] posicaoValorInserido = Buscador.buscarIndexValorInserido(tabelaEmbaralhada, insert);
 
-		int linhaValorInserido = posicaoValorInserido[0];
 		int colunaValorInserido = posicaoValorInserido[1];
-		int linhaEspacoBranco = index[0];// Linha do espaço em branco
-		int colunaEspacoBranco = index[1];// Coluna do espaço em branco
+		int linhaValorInserido = posicaoValorInserido[0];
+		
+		int linhaEspacoBranco = index[0];
+		int colunaEspacoBranco = index[1];
 		String temp;
 
 		if (Verificar.verificarEntrada(linhaEspacoBranco, colunaEspacoBranco, linhaValorInserido,
 				colunaValorInserido) == false) {
-			System.out.println("\n Valor inserido Invalido! ");
-			System.out.println(" Insira um valor valido! \n");
+			System.out.println("\n Valor Invalido! ");
+			System.out.println(" Digite um valor valido! \n");
 
 			return tabelaEmbaralhada;
 		}
